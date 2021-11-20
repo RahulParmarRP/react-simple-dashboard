@@ -4,7 +4,6 @@ export const users = JSON.stringify([
         "name": "Leanne Graham",
         "username": "Bret",
         "email": "Sincere@april.biz",
-        "password": "test1234",
         "address": {
             "street": "Kulas Light",
             "suite": "Apt. 556",
@@ -212,6 +211,7 @@ export const users = JSON.stringify([
         "name": "Clementina DuBuque",
         "username": "Moriah.Stanton",
         "email": "Rey.Padberg@karina.biz",
+        "password": "test1234",
         "address": {
             "street": "Kattie Turnpike",
             "suite": "Suite 198",

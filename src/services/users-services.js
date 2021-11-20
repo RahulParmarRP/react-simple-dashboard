@@ -4,17 +4,19 @@ import httpClient from './http-service'
 export const getUsers = async () => httpClient.get('https://jsonplaceholder.typicode.com/users')
 
 export const checkLoggedInUser = async (loggedInUser) => {
-    getUsers()
+    debugger
+    let user = null
+    await getUsers()
         .then(res => {
+            debugger
             const users = res.data
             const userFound = users.find(user => user.email === loggedInUser.email)
             if (userFound) {
                 localStorage.setItem('user', JSON.stringify(userFound))
-                return userFound
-            } else {
-                return null
+                user = userFound
             }
-        }).catch()
+        }).catch((error) => console.log(error))
+    return user
 }
 
 

@@ -19,12 +19,12 @@ const Login = () => {
         }
         checkLoggedInUser(user)
             .then(loggedInUser => {
+                debugger
                 if (loggedInUser) {
                     navigate('/dashboard')
                 } else {
                     alert('Invalid email or password')
                 }
-
             })
     }
     return (
