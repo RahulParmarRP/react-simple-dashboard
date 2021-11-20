@@ -7,7 +7,6 @@ const Dashboard = () => {
     useEffect(() => {
         getUsers()
             .then(res => {
-                debugger
                 setUsers(res.data)
             }).catch(err => console.log(err))
     }, [])

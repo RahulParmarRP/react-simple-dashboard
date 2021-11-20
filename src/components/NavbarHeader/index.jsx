@@ -1,8 +1,14 @@
 import React from 'react'
 import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
+import { useNavigate } from 'react-router'
 
 export const NavbarHeader = () => {
+    const navigate = useNavigate()
+    const handleLogout = () => {
+        localStorage.removeItem('user')
+        navigate("/")
+    }
     return (
         <Navbar bg="dark" variant="dark">
             <Container>
@@ -16,6 +22,7 @@ export const NavbarHeader = () => {
                     />{' '}
                     Dashboard
                 </Navbar.Brand>
+                <button className="btn btn-outline-light" onClick={() => handleLogout()}>Logout</button>
             </Container>
         </Navbar>
     )

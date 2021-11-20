@@ -12,14 +12,13 @@ const Login = () => {
     const navigate = useNavigate()
 
     const handleSubmit = () => {
-        debugger
         const user = {
             email,
             password
         }
         checkLoggedInUser(user)
             .then(loggedInUser => {
-                debugger
+
                 if (loggedInUser) {
                     navigate('/dashboard')
                 } else {
