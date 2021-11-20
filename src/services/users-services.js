@@ -1,7 +1,6 @@
 import httpClient from "./http-service";
 
-export const getUsers = async () =>
-  httpClient.get("https://jsonplaceholder.typicode.com/users");
+export const getUsers = async () => httpClient.get("/users");
 
 export const checkLoggedInUser = async (loggedInUser) => {
   let user = null;

@@ -1,10 +1,10 @@
-import "./App.css"
-import Login from "./pages/Login"
-import { Routes, Route } from "react-router-dom"
-import Dashboard from "./pages/Dashboard"
-import Container from "react-bootstrap/Container"
-import { PrivateRoute } from "./components/PrivateRoute"
-import NavbarHeader from "./components/NavbarHeader"
+import "./App.css";
+import Login from "./pages/Login";
+import { Routes, Route } from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
+import Container from "react-bootstrap/Container";
+import { PrivateRoute } from "./components/PrivateRoute";
+import NavbarHeader from "./components/NavbarHeader";
 function App() {
   return (
     <>
@@ -18,7 +18,7 @@ function App() {
         </Routes>
       </Container>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
