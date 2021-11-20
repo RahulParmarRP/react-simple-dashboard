@@ -1,1 +1,1 @@
-const getCurrentUser = () => JSON.parse(localStorage.getItem('user'))
+const getCurrentUser = () => JSON.parse(localStorage.getItem("user"));

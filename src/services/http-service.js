@@ -1,5 +1,5 @@
-import axios from "axios"
+import axios from "axios";
 
-export const httpClient = axios.create()
+export const httpClient = axios.create();
 
-export default httpClient
+export default httpClient;
