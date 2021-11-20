@@ -13,13 +13,15 @@ const Login = () => {
 
   const handleSubmit = () => {
     const user = { email, password };
-    checkLoggedInUser(user).then((loggedInUser) => {
-      if (loggedInUser) {
-        navigate("/dashboard");
-      } else {
-        alert("Invalid email or password");
-      }
-    });
+    checkLoggedInUser(user)
+      .then((loggedInUser) => {
+        if (loggedInUser) {
+          navigate("/dashboard");
+        } else {
+          alert("Invalid email or password");
+        }
+      })
+      .catch((error) => console.log(error));
   };
   return (
     <div className="login-form-wrapper">

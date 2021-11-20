@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import NavbarHeader from "../../components/NavbarHeader";
 import DataTable from "../../components/DataTable";
 import { getUsers } from "../../services/users-services";
+import { Col, Row, Container } from "react-bootstrap";
 const Dashboard = () => {
   const [users, setUsers] = React.useState([]);
   useEffect(() => {
@@ -12,10 +12,13 @@ const Dashboard = () => {
       .catch((err) => console.log(err));
   }, []);
   return (
-    <div>
-      <NavbarHeader />
-      <DataTable data={users} />
-    </div>
+    <Container>
+      <Row className="mt-5">
+        <Col>
+          <DataTable data={users} />
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

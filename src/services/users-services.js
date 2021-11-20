@@ -7,7 +7,7 @@ export const checkLoggedInUser = async (loggedInUser) => {
   let user = null;
   await getUsers()
     .then((res) => {
-      const users = res.data.map((user) => (user.password = "test1234"));
+      const users = res.data.map((user) => ({ ...user, password: "test1234" }));
       const userFound = users.find(
         (user) =>
           user.email === loggedInUser.email &&

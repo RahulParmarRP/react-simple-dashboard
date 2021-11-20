@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import { useNavigate } from "react-router";
 import { getCurrentUser } from "../../utils";
 export const NavbarHeader = () => {
-  const currentUser = getCurrentUser;
+  const currentUser = getCurrentUser();
   const navigate = useNavigate();
   const handleLogout = () => {
     localStorage.removeItem("user");
@@ -13,7 +13,7 @@ export const NavbarHeader = () => {
   return (
     <Navbar bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <img
             alt=""
             src="/logo.svg"
@@ -23,15 +23,19 @@ export const NavbarHeader = () => {
           />{" "}
           Sample Dashboard
         </Navbar.Brand>
-        {currentUser && <div>Hello {currentUser.username}</div>}
-        {currentUser && (
-          <button
-            className="btn btn-outline-light"
-            onClick={() => handleLogout()}
-          >
-            Logout
-          </button>
-        )}
+        <div className="user-info">
+          {currentUser && (
+            <div className="loggedin-username mr-2">{currentUser.username}</div>
+          )}
+          {currentUser && (
+            <button
+              className="btn btn-outline-light"
+              onClick={() => handleLogout()}
+            >
+              Logout
+            </button>
+          )}
+        </div>
       </Container>
     </Navbar>
   );

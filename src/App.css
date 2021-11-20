@@ -2,8 +2,24 @@
   height: 100vh;
 }
 
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.loggedin-username {
+  color: #fff;
+  margin-right: 10px;
+}
+
 .login-form-wrapper .col {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.login-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

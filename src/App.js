@@ -1,6 +1,6 @@
 import "./App.css";
 import Login from "./pages/Login";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Container from "react-bootstrap/Container";
 import { PrivateRoute } from "./components/PrivateRoute";
