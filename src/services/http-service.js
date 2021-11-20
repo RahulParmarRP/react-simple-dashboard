@@ -1,7 +1,5 @@
 import axios from "axios"
-import { BASE_API } from "../utils"
-export const httpClient = axios.create({
-  baseUrl: BASE_API,
-})
+axios.defaults.baseURL = 'https://jsonplaceholder.typicode.com'
+export const httpClient = axios
 
 export default httpClient
