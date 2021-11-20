@@ -1,21 +1,21 @@
-import React, { useEffect } from "react";
-import Table from "react-bootstrap/Table";
-import Form from "react-bootstrap/Form";
+import React, { useEffect } from "react"
+import Table from "react-bootstrap/Table"
+import Form from "react-bootstrap/Form"
 const DataTable = ({ data }) => {
-  const [rows, setRows] = React.useState(data);
+  const [rows, setRows] = React.useState(data)
   const handleFilter = (filterBy, value) => {
     if (!value) {
-      setRows(data);
-      return;
+      setRows(data)
+      return
     }
     const filteredUsers = rows.filter((row) =>
       row[filterBy].toLowerCase().includes(value.trim().toLowerCase())
-    );
-    setRows(filteredUsers);
-  };
+    )
+    setRows(filteredUsers)
+  }
   useEffect(() => {
-    setRows(data);
-  }, [data]);
+    setRows(data)
+  }, [data])
   return (
     <Table striped bordered hover size="sm">
       <thead>
@@ -53,11 +53,11 @@ const DataTable = ({ data }) => {
               <td>{item.username}</td>
               <td>{item.email}</td>
             </tr>
-          );
+          )
         })}
       </tbody>
     </Table>
-  );
-};
+  )
+}
 
-export default DataTable;
+export default DataTable
